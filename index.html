@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Esports // Aurora</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="cursor-glow"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">MC-ESPORTS</a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="latest-info" class="fade-in-up">
+                <h2>LATEST TRANSMISSION</h2>
+                <div class="tournament-card">
+                    <h3>Esport Minecraft Tournament</h3>
+                    <p class="prize-pool">PRIZE POOL: ₹5000+</p>
+                </div>
+            </section>
+
+            <section id="registration" class="fade-in-up">
+                <h2>SECURE YOUR SPOT</h2>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <input type="text" id="fullName" name="fullName" required placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="age" name="age" required placeholder="Age">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="ign" name="ign" required placeholder="In-Game Name (IGN)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="discordId" name="discordId" required placeholder="Discord ID (username#1234)">
+                    </div>
+                    <button type="submit">REGISTER</button>
+                </form>
+                <p id="status-message"></p>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

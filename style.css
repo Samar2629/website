@@ -1,0 +1,88 @@
+/* --- AURORA THEME VARIABLES --- */
+:root {
+    --primary-color: #3f51b5; /* A rich, deep Indigo */
+    --secondary-color: #9c27b0; /* A vibrant Purple */
+    --background-color: #05050A; /* Near-absolute black */
+    --surface-color: rgba(15, 16, 26, 0.6); /* Very dark, semi-transparent surface */
+    --text-color: #EAEAEA;
+    --glow-color: rgba(63, 81, 181, 0.4);
+}
+
+/* --- GLOBAL STYLES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--background-color); color: var(--text-color); overflow-x: hidden; }
+
+/* --- INTERACTIVE CURSOR GLOW --- */
+#cursor-glow { position: fixed; top: 0; left: 0; width: 600px; height: 600px; background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%); border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: -1; transition: transform 0.15s ease-out; }
+
+/* --- NAVIGATION BAR --- */
+nav { position: sticky; top: 0; padding: 1.5rem 0; background-color: rgba(5, 5, 10, 0.5); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); z-index: 1000; }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 2rem; color: var(--text-color); text-decoration: none; letter-spacing: 2px; transition: all 0.3s ease; }
+.logo:hover { color: var(--primary-color); text-shadow: 0 0 15px var(--glow-color); }
+nav ul { list-style: none; display: flex; gap: 2.5rem; }
+nav a { color: var(--text-color); text-decoration: none; font-weight: 500; font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; transition: all 0.3s ease; }
+nav a:hover, nav a.active { color: var(--primary-color); text-shadow: 0 0 10px var(--glow-color); }
+
+/* --- MAIN CONTENT & CARDS --- */
+.container { max-width: 700px; margin: 5rem auto; padding: 0 2rem; }
+section { background: var(--surface-color); backdrop-filter: blur(8px); padding: 3rem; margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; transition: all 0.3s ease; }
+section:hover { border-color: rgba(63, 81, 181, 0.5); box-shadow: 0 0 30px rgba(63, 81, 181, 0.2); }
+h2 { font-family: 'Rajdhani', sans-serif; font-size: 2.2rem; font-weight: 700; text-align: center; margin-bottom: 2.5rem; color: var(--text-color); letter-spacing: 3px; text-transform: uppercase; }
+.prize-pool { font-size: 1.5rem; color: #4CAF50; font-weight: bold; text-shadow: 0 0 8px rgba(76, 175, 80, 0.7); text-align: center; }
+.tournament-card h3 { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+
+/* --- ELEGANT FORM --- */
+.form-group { margin-bottom: 1.5rem; }
+.form-group input { width: 100%; padding: 14px; background-color: rgba(0, 0, 0, 0.4); border: 1px solid #333; color: var(--text-color); border-radius: 6px; font-size: 1rem; font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
+.form-group input::placeholder { color: #888; }
+.form-group input:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 20px -5px var(--glow-color); }
+
+/* --- BUTTONS --- */
+button, .join-button { display: block; text-decoration: none; text-align: center; width: 100%; padding: 15px; border-radius: 6px; color: #fff; font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; }
+button { background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); border: none; }
+button:hover { transform: translateY(-3px); box-shadow: 0 4px 20px rgba(156, 39, 176, 0.4); }
+.join-button { background: #5865F2; border: none; }
+.join-button:hover { transform: translateY(-3px); box-shadow: 0 4px 20px rgba(88, 101, 242, 0.4); }
+
+/* --- ANIMATIONS & STATUS --- */
+.fade-in-up { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+#status-message { margin-top: 1.5rem; text-align: center; font-weight: 600; font-size: 1.1rem; height: 20px; }
+
+/* --- COMMUNITY WIDGET STYLES --- */
+.discord-card { display: flex; flex-direction: column; gap: 1.5rem; }
+.server-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 1rem; }
+.server-header h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.8rem; }
+#online-count { display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; color: #ccc; }
+#online-count .dot { width: 10px; height: 10px; background-color: #4CAF50; border-radius: 50%; box-shadow: 0 0 5px #4CAF50; }
+.discord-card h4 { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+
+/* --- NEW BOX STYLES --- */
+#voice-activity-box, #online-members-box {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+#online-members-box {
+    border-left-color: #555; /* A more neutral color for the general list */
+}
+
+/* --- LIST STYLES --- */
+#voice-channel-list, #member-list { list-style: none; max-height: 250px; overflow-y: auto; padding-right: 10px; }
+.loading-state { color: #888; }
+.member-avatar { width: 30px; height: 30px; border-radius: 50%; }
+.member-name { font-weight: 500; }
+
+/* Voice Channel List (Single Column) */
+#voice-channel-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.voice-channel-item { background-color: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 0.75rem; }
+.channel-name { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1.1rem; display: block; margin-bottom: 0.75rem; color: var(--primary-color); }
+.voice-member-list { list-style: none; padding-left: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+#voice-channel-list .member-item { display: flex; align-items: center; gap: 0.75rem; }
+
+/* General Member List (Grid) */
+#member-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+#member-list .member-item { display: flex; align-items: center; gap: 0.75rem; background-color: rgba(255, 255, 255, 0.05); padding: 5px 10px; border-radius: 20px; width: calc(50% - 0.5rem); }

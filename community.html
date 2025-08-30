@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community // Aurora</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="cursor-glow"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">MC-ESPORTS</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="community-widget" class="fade-in-up">
+                <h2>JOIN THE CONVERSATION</h2>
+                <div class="discord-card">
+                    <div class="server-header">
+                        <h3 id="server-name">Loading Server...</h3>
+                        <p id="online-count"><span class="dot"></span>-- Online</p>
+                    </div>
+
+                    <!-- NEW: Dedicated box for Voice Activity -->
+                    <div id="voice-activity-box">
+                        <h4>Live in Voice</h4>
+                        <ul id="voice-channel-list">
+                            <li class="loading-state">Checking voice activity...</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Box for All Online Members -->
+                    <div id="online-members-box">
+                        <h4>Members Online</h4>
+                        <ul id="member-list">
+                            <li class="loading-state">Fetching member data...</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://discord.gg/TSDrjaxZbw" target="_blank" rel="noopener noreferrer" class="join-button">
+                        Join Discord
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="community-script.js"></script>
+</body>
+</html>
